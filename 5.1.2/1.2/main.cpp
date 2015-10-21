@@ -19,12 +19,12 @@ void assert(char str[], bool test)
 int main()
 {
     assert("(())", true);
-	assert("[[[]]()]", true);
-	assert("(({()(())}[][]))", true);
-	assert("{{({})}}", true);
-	assert("({[]}){[]}", true);
-	assert("{)({}", false);
-	return 0;
+    assert("[[[]]()]", true);
+    assert("(({()(())}[][]))", true);
+    assert("{{({})}}", true);
+    assert("({[]}){[]}", true);
+    assert("{)({}", false);
+    return 0;
 }
 bool staca(char str[])
 {
