@@ -10,18 +10,21 @@
 #include <stack>
 using namespace std;
 bool staca(char str[]);
+void assert(char str[], bool test)
+{
+	bool a = staca(str);
+	if (a == test) cout << "OK" << endl;
+	else cout << "FAIL" << endl;
+}
 int main()
 {
-    char  str[15] = "{(){()}}";
-    bool a = staca(str);
-    if (a == true)
-    {
-        cout<<" ok"<<endl;
-    }
-    else
-    {
-        cout<<"ne ok"<<endl;
-    }
+    assert("(())", true);
+	assert("[[[]]()]", true);
+	assert("(({()(())}[][]))", true);
+	assert("{{({})}}", true);
+	assert("({[]}){[]}", true);
+	assert("{)({}", false);
+	return 0;
 }
 bool staca(char str[])
 {
